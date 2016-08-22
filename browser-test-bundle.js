@@ -1,10 +1,102 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-"use strict";
+'use strict';
 
-},{}],2:[function(require,module,exports){
-"use strict";
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-},{}],3:[function(require,module,exports){
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = require('react');
+
+var EyesOnMe = function (_React$Component) {
+  _inherits(EyesOnMe, _React$Component);
+
+  function EyesOnMe() {
+    _classCallCheck(this, EyesOnMe);
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(EyesOnMe).call(this));
+
+    _this.onFocus = _this.onFocus.bind(_this);
+    _this.onBlur = _this.onBlur.bind(_this);
+    return _this;
+  }
+
+  _createClass(EyesOnMe, [{
+    key: 'onFocus',
+    value: function onFocus() {
+      console.log('Good!');
+    }
+  }, {
+    key: 'onBlur',
+    value: function onBlur() {
+      console.log('Hey! Eyes on me!');
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'button',
+        { onFocus: this.onFocus, onBlur: this.onBlur },
+        'Eyes on me, please!'
+      );
+    }
+  }]);
+
+  return EyesOnMe;
+}(React.Component);
+
+module.exports = EyesOnMe;
+
+},{"react":416}],2:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var React = require('react');
+
+var Keypad = function (_React$Component) {
+  _inherits(Keypad, _React$Component);
+
+  function Keypad() {
+    _classCallCheck(this, Keypad);
+
+    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Keypad).call(this));
+
+    _this.handleInputPassword = _this.handleInputPassword.bind(_this);
+    return _this;
+  }
+
+  _createClass(Keypad, [{
+    key: 'handleInputPassword',
+    value: function handleInputPassword() {
+      console.log('Entering password...');
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        'div',
+        null,
+        React.createElement('input', { type: 'password', onKeyUp: this.handleInputPassword })
+      );
+    }
+  }]);
+
+  return Keypad;
+}(React.Component);
+
+module.exports = Keypad;
+
+},{"react":416}],3:[function(require,module,exports){
 'use strict'
 
 exports.toByteArray = toByteArray
