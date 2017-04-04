@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-class EyesOnMe extends React.Component {
+export default class EyesOnMe extends React.Component {
   constructor() {
     super();
 
@@ -24,5 +24,3 @@ class EyesOnMe extends React.Component {
     );
   }
 }
-
-module.exports = EyesOnMe;

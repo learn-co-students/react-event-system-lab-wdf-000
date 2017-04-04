@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-class Keypad extends React.Component {
+export default class Keypad extends React.Component {
   constructor() {
     super();
 
@@ -19,5 +19,3 @@ class Keypad extends React.Component {
     );
   }
 }
-
-module.exports = Keypad;
